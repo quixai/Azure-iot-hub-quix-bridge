@@ -59,3 +59,14 @@ await using EventHubConsumerClient consumer =
     new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName, connectionString,
         eventHubName);
 ```
+
+## Deployment
+This bridge can run locally or in our serverless environment. To learn how to deploy services in Quix please see our [doc](https://documentation.platform.quix.ai/deploy/).
+
+## Result
+**If persistence on your topic is enabled**, stream with data from IoT Hub willl be persisted to the catalogue where you can query it. 
+
+[![](img/azure-hub-data.png)](img/azure-hub-data.png "Stream in data catalogue")
+
+
+[![](img/events-table.png)](img/events-table.png "Model parameters in parameter browser")
