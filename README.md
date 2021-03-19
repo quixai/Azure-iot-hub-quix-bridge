@@ -1,10 +1,10 @@
 # Microsoft Azure IoT Hub bridge
 The sample contained in this folder gives an example on how to connect to Azure IoT hub and bridge data into Kafka using Quix SDK.
 
-# Requirements to run the sample
+## Requirements to run the sample
 - .Net Core 3.0 SDK https://dotnet.microsoft.com/download/dotnet-core/3.0
 
-# Run the sample
+## Run the sample
 - In root folder run `dotnet restore`
 - `cd .\IoT.Brige\`
 - `dotnet run`
