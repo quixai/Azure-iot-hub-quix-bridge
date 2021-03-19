@@ -5,6 +5,7 @@ The sample contained in this folder gives an example on how to connect to Azure 
 
 ## Requirements to run the sample
 - .Net Core 3.0 SDK https://dotnet.microsoft.com/download/dotnet-core/3.0
+- az https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 
 ## Run the sample
 - In root folder run `dotnet restore`
