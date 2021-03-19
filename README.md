@@ -13,7 +13,7 @@ The sample contained in this folder gives an example on how to connect to Azure 
 
 
 ## Code walkthrough
-In this code snippet, service connects to Kafka topic in Quix.
+In this code snippet, the service connects to the Kafka topic in Quix.
 ### Connection to Quix
 ```csharp
  // Create a client factory. Factory helps you create StreamingClient (see below) a little bit easier
@@ -59,6 +59,19 @@ await using EventHubConsumerClient consumer =
     new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName, connectionString,
         eventHubName);
 ```
+
+### Transformation to Quix SDK format
+In code example we simply get whole JSON message and send it as a event with Quix SDK.
+
+```csharp
+var data = Encoding.UTF8.GetString(partitionEvent.Data.Body.ToArray());
+
+                        stream.Events
+                            .AddTimestamp(partitionEvent.Data.EnqueuedTime.ToUniversalTime().DateTime)
+                            .AddValue("message", data)
+                            .Write();
+```
+but in a real application, we suggest you develop a model to parse this data and send it using parameters in Quix SDK. 
 
 ## Deployment
 This bridge can run locally or in our serverless environment. To learn how to deploy services in Quix please see our [doc](https://documentation.platform.quix.ai/deploy/).
