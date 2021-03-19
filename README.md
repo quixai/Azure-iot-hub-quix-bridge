@@ -13,8 +13,9 @@ The sample contained in this folder gives an example on how to connect to Azure 
 
 
 ## Code walkthrough
-In this code snippet, the service connects to the Kafka topic in Quix.
+
 ### Connection to Quix
+In this code snippet, the service connects to the Kafka topic in Quix. Use the Library page in the Quix portal to generate this code for a particular topic in your workspace.
 ```csharp
  // Create a client factory. Factory helps you create StreamingClient (see below) a little bit easier
 var client = new Quix.Sdk.Streaming.StreamingClient(
