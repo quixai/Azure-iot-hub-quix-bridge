@@ -76,7 +76,7 @@ var data = Encoding.UTF8.GetString(partitionEvent.Data.Body.ToArray());
 but in a real application, we suggest you develop a model to parse this data and send it using parameters in Quix SDK. 
 
 ## Deployment
-This bridge can run locally or in our serverless environment. To learn how to deploy services in Quix please see our [doc](https://documentation.platform.quix.ai/deploy/).
+This bridge can run locally or in our serverless environment. To learn how to deploy services in Quix please see our [doc](https://quix.ai/docs/guides/how-to/manage-deployments/create-deployment.html).
 
 ## Result
 **If persistence on your topic is enabled**, stream with data from IoT Hub willl be persisted to the catalogue where you can query it. 
